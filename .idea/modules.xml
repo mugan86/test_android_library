@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ServerTakeInfo.iml" filepath="$PROJECT_DIR$/ServerTakeInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-adibidea-liburutegia-erabiliz.iml" filepath="$PROJECT_DIR$/android-adibidea-liburutegia-erabiliz.iml" />
       <module fileurl="file://$PROJECT_DIR$/apirequest/apirequest.iml" filepath="$PROJECT_DIR$/apirequest/apirequest.iml" />
       <module fileurl="file://$PROJECT_DIR$/apirequests/apirequests.iml" filepath="$PROJECT_DIR$/apirequests/apirequests.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

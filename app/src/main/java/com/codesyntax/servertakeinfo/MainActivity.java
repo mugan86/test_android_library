@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 
 import com.codesyntax.mylibrary.APIRequestsConnection;
+import com.codesyntax.mylibrary.CheckInternetConnection;
 
 import java.io.IOException;
 
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
             System.out.println("POST Server Request--->   " + APIRequestsConnection.getHttpPostAPI("http://mugan86.com/serviraces/api/v1/info/get/summary.php", builder));
 
+            System.out.println("Internet Available? "+ CheckInternetConnection.isAvailable(getApplicationContext()));
+
+            System.out.println("Connection Type:  "+ CheckInternetConnection.getNetworkConnectionInfo(getApplicationContext()));
         } catch (IOException e) {
             e.printStackTrace();
         }
