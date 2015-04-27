@@ -1,4 +1,4 @@
-package com.codesyntax.mylibrary;
+package com.codesyntax.mylibrary.status;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -7,8 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-import com.codesyntax.mylibrary.APIRequestsConnection;
-import com.codesyntax.mylibrary.CheckInternetConnection;
+import com.codesyntax.mylibrary.api.Request;
+import com.codesyntax.mylibrary.status.CheckInternetConnection;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         try {
 
             //Get Operation
-            System.out.println("GET Server Request--->   " + APIRequestsConnection.getHttpGETAPI("http://mugan86.com/serviraces/api/v1/info/get/summary.php", "", false, "", ""));
+            System.out.println("GET Server Request--->   " + Request.getHttpGETAPI("http://mugan86.com/serviraces/api/v1/info/get/summary.php", "", false, "", ""));
 
 
             //POST operation
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     .appendQueryParameter("username", "servirace")
                     .appendQueryParameter("password", "");
 
-            System.out.println("POST Server Request--->   " + APIRequestsConnection.getHttpPostAPI("http://mugan86.com/serviraces/api/v1/info/get/summary.php", builder));
+            System.out.println("POST Server Request--->   " + Request.getHttpPostAPI("http://mugan86.com/serviraces/api/v1/info/get/summary.php", builder));
 
             System.out.println("Internet Available? "+ CheckInternetConnection.isAvailable(getApplicationContext()));
 

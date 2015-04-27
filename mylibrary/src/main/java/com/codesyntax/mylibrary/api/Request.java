@@ -1,4 +1,4 @@
-package com.codesyntax.mylibrary;
+package com.codesyntax.mylibrary.api;
 
 import android.net.Uri;
 import android.os.StrictMode;
@@ -32,7 +32,7 @@ import java.net.URL;
  *
  ***************************************************************************************************/
 
-public class APIRequestsConnection {
+public class Request {
 
     //Example to set auth token to get request from server with GET
     public static String getHttpPostAPI(String request_url, Uri.Builder builder) throws IOException {
