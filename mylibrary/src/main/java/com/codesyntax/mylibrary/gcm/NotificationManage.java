@@ -2,6 +2,17 @@ package com.codesyntax.mylibrary.gcm;
 
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.codesyntax.mylibrary.ConstantValues;
+import com.codesyntax.mylibrary.UserData;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.io.IOException;
@@ -12,14 +23,13 @@ public class NotificationManage {
     private Activity context;
     private GoogleCloudMessaging gcm;
     private String regid;
-    private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 
     public NotificationManage(Activity context)
     {
         this.context = context;
     }
 
-   /* public void pushNotifications()
+    public void pushNotifications()
     {
         //Aktibitatearen kontextua hartuko dugu
 
@@ -45,12 +55,12 @@ public class NotificationManage {
      * it doesn't, display a dialog that allows users to download the APK from
      * the Google Play Store or enable it in the device's system settings.
      */
-   /* private boolean checkPlayServices() {
+    private boolean checkPlayServices() {
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(context);
         if (resultCode != ConnectionResult.SUCCESS) {
             if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
                 GooglePlayServicesUtil.getErrorDialog(resultCode, context,
-                        PLAY_SERVICES_RESOLUTION_REQUEST).show();
+                        ConstantValues.PLAY_SERVICES_RESOLUTION_REQUEST).show();
             } else {
                 System.out.println ("Konprobatu Google Zerbitzuak instalatuta dituzun");
                 //context.finish();
@@ -149,5 +159,5 @@ public class NotificationManage {
             return "";
         }
         return registrationId;
-    }*/
+    }
 }
